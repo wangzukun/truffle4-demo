@@ -1,0 +1,321 @@
+/**
+ * Created by wangzukun on 2018/3/11.
+ */
+
+var Web3 = require('web3');
+var contract = require("truffle-contract");
+
+var provider = new Web3.providers.HttpProvider("http://localhost:7545");
+
+//使用truffle-contract包的contract()方法
+//请务必使用你自己编译的Test.json文件内容
+var Test = contract(
+    {
+        "contractName": "Test",
+        "abi": [
+            {
+                "constant": false,
+                "inputs": [],
+                "name": "sayHi",
+                "outputs": [
+                    {
+                        "name": "",
+                        "type": "string"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            }
+        ],
+        "bytecode": "0x6060604052341561000f57600080fd5b6101578061001e6000396000f300606060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630c49c36c14610046575b600080fd5b341561005157600080fd5b6100596100d4565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561009957808201518184015260208101905061007e565b50505050905090810190601f1680156100c65780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6100dc610117565b6040805190810160405280600d81526020017f48692077616e677a756b756e2100000000000000000000000000000000000000815250905090565b6020604051908101604052806000815250905600a165627a7a72305820dc422e9bb0956d9682dfa6363f77b0bf147c7fd1d9eef36522a4501f2206376a0029",
+        "deployedBytecode": "0x606060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630c49c36c14610046575b600080fd5b341561005157600080fd5b6100596100d4565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561009957808201518184015260208101905061007e565b50505050905090810190601f1680156100c65780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6100dc610117565b6040805190810160405280600d81526020017f48692077616e677a756b756e2100000000000000000000000000000000000000815250905090565b6020604051908101604052806000815250905600a165627a7a72305820dc422e9bb0956d9682dfa6363f77b0bf147c7fd1d9eef36522a4501f2206376a0029",
+        "sourceMap": "26:93:1:-;;;;;;;;;;;;;;;;;",
+        "deployedSourceMap": "26:93:1:-;;;;;;;;;;;;;;;;;;;;;;;;45:72;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;45:72:1;71:6;;:::i;:::-;88:22;;;;;;;;;;;;;;;;;;;;45:72;:::o;26:93::-;;;;;;;;;;;;;;;:::o",
+        "source": "pragma solidity ^0.4.17;\n\ncontract Test{\n    function sayHi() returns (string){\n        return \"Hi wangzukun!\";\n    }\n}",
+        "sourcePath": "/Users/wangzukun/Documents/workSpace/git/truffle4-demo/contracts/Test.sol",
+        "ast": {
+            "absolutePath": "/Users/wangzukun/Documents/workSpace/git/truffle4-demo/contracts/Test.sol",
+            "exportedSymbols": {
+                "Test": [
+                    67
+                ]
+            },
+            "id": 68,
+            "nodeType": "SourceUnit",
+            "nodes": [
+                {
+                    "id": 58,
+                    "literals": [
+                        "solidity",
+                        "^",
+                        "0.4",
+                        ".17"
+                    ],
+                    "nodeType": "PragmaDirective",
+                    "src": "0:24:1"
+                },
+                {
+                    "baseContracts": [],
+                    "contractDependencies": [],
+                    "contractKind": "contract",
+                    "documentation": null,
+                    "fullyImplemented": true,
+                    "id": 67,
+                    "linearizedBaseContracts": [
+                        67
+                    ],
+                    "name": "Test",
+                    "nodeType": "ContractDefinition",
+                    "nodes": [
+                        {
+                            "body": {
+                                "id": 65,
+                                "nodeType": "Block",
+                                "src": "78:39:1",
+                                "statements": [
+                                    {
+                                        "expression": {
+                                            "argumentTypes": null,
+                                            "hexValue": "48692077616e677a756b756e21",
+                                            "id": 63,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": true,
+                                            "kind": "string",
+                                            "lValueRequested": false,
+                                            "nodeType": "Literal",
+                                            "src": "95:15:1",
+                                            "subdenomination": null,
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_stringliteral_a38ccb78315e71fa9d154cb445057a24a616b8e0d539f07d62a9826e9ca69f8e",
+                                                "typeString": "literal_string \"Hi wangzukun!\""
+                                            },
+                                            "value": "Hi wangzukun!"
+                                        },
+                                        "functionReturnParameters": 62,
+                                        "id": 64,
+                                        "nodeType": "Return",
+                                        "src": "88:22:1"
+                                    }
+                                ]
+                            },
+                            "id": 66,
+                            "implemented": true,
+                            "isConstructor": false,
+                            "isDeclaredConst": false,
+                            "modifiers": [],
+                            "name": "sayHi",
+                            "nodeType": "FunctionDefinition",
+                            "parameters": {
+                                "id": 59,
+                                "nodeType": "ParameterList",
+                                "parameters": [],
+                                "src": "59:2:1"
+                            },
+                            "payable": false,
+                            "returnParameters": {
+                                "id": 62,
+                                "nodeType": "ParameterList",
+                                "parameters": [
+                                    {
+                                        "constant": false,
+                                        "id": 61,
+                                        "name": "",
+                                        "nodeType": "VariableDeclaration",
+                                        "scope": 66,
+                                        "src": "71:6:1",
+                                        "stateVariable": false,
+                                        "storageLocation": "default",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_string_memory_ptr",
+                                            "typeString": "string memory"
+                                        },
+                                        "typeName": {
+                                            "id": 60,
+                                            "name": "string",
+                                            "nodeType": "ElementaryTypeName",
+                                            "src": "71:6:1",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_string_storage_ptr",
+                                                "typeString": "string storage pointer"
+                                            }
+                                        },
+                                        "value": null,
+                                        "visibility": "internal"
+                                    }
+                                ],
+                                "src": "70:8:1"
+                            },
+                            "scope": 67,
+                            "src": "45:72:1",
+                            "stateMutability": "nonpayable",
+                            "superFunction": null,
+                            "visibility": "public"
+                        }
+                    ],
+                    "scope": 68,
+                    "src": "26:93:1"
+                }
+            ],
+            "src": "0:119:1"
+        },
+        "legacyAST": {
+            "absolutePath": "/Users/wangzukun/Documents/workSpace/git/truffle4-demo/contracts/Test.sol",
+            "exportedSymbols": {
+                "Test": [
+                    67
+                ]
+            },
+            "id": 68,
+            "nodeType": "SourceUnit",
+            "nodes": [
+                {
+                    "id": 58,
+                    "literals": [
+                        "solidity",
+                        "^",
+                        "0.4",
+                        ".17"
+                    ],
+                    "nodeType": "PragmaDirective",
+                    "src": "0:24:1"
+                },
+                {
+                    "baseContracts": [],
+                    "contractDependencies": [],
+                    "contractKind": "contract",
+                    "documentation": null,
+                    "fullyImplemented": true,
+                    "id": 67,
+                    "linearizedBaseContracts": [
+                        67
+                    ],
+                    "name": "Test",
+                    "nodeType": "ContractDefinition",
+                    "nodes": [
+                        {
+                            "body": {
+                                "id": 65,
+                                "nodeType": "Block",
+                                "src": "78:39:1",
+                                "statements": [
+                                    {
+                                        "expression": {
+                                            "argumentTypes": null,
+                                            "hexValue": "48692077616e677a756b756e21",
+                                            "id": 63,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": true,
+                                            "kind": "string",
+                                            "lValueRequested": false,
+                                            "nodeType": "Literal",
+                                            "src": "95:15:1",
+                                            "subdenomination": null,
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_stringliteral_a38ccb78315e71fa9d154cb445057a24a616b8e0d539f07d62a9826e9ca69f8e",
+                                                "typeString": "literal_string \"Hi wangzukun!\""
+                                            },
+                                            "value": "Hi wangzukun!"
+                                        },
+                                        "functionReturnParameters": 62,
+                                        "id": 64,
+                                        "nodeType": "Return",
+                                        "src": "88:22:1"
+                                    }
+                                ]
+                            },
+                            "id": 66,
+                            "implemented": true,
+                            "isConstructor": false,
+                            "isDeclaredConst": false,
+                            "modifiers": [],
+                            "name": "sayHi",
+                            "nodeType": "FunctionDefinition",
+                            "parameters": {
+                                "id": 59,
+                                "nodeType": "ParameterList",
+                                "parameters": [],
+                                "src": "59:2:1"
+                            },
+                            "payable": false,
+                            "returnParameters": {
+                                "id": 62,
+                                "nodeType": "ParameterList",
+                                "parameters": [
+                                    {
+                                        "constant": false,
+                                        "id": 61,
+                                        "name": "",
+                                        "nodeType": "VariableDeclaration",
+                                        "scope": 66,
+                                        "src": "71:6:1",
+                                        "stateVariable": false,
+                                        "storageLocation": "default",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_string_memory_ptr",
+                                            "typeString": "string memory"
+                                        },
+                                        "typeName": {
+                                            "id": 60,
+                                            "name": "string",
+                                            "nodeType": "ElementaryTypeName",
+                                            "src": "71:6:1",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_string_storage_ptr",
+                                                "typeString": "string storage pointer"
+                                            }
+                                        },
+                                        "value": null,
+                                        "visibility": "internal"
+                                    }
+                                ],
+                                "src": "70:8:1"
+                            },
+                            "scope": 67,
+                            "src": "45:72:1",
+                            "stateMutability": "nonpayable",
+                            "superFunction": null,
+                            "visibility": "public"
+                        }
+                    ],
+                    "scope": 68,
+                    "src": "26:93:1"
+                }
+            ],
+            "src": "0:119:1"
+        },
+        "compiler": {
+            "name": "solc",
+            "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
+        },
+        "networks": {
+            "5777": {
+                "events": {},
+                "links": {},
+                "address": "0xf12b5dd4ead5f743c6baa640b0216200e89b60da",
+                "transactionHash": "0x6d92f6abd0c052c19fc0abc67027e05c6f065cc45e8bd8bebec3cd606a5e95d4"
+            }
+        },
+        "schemaVersion": "2.0.0",
+        "updatedAt": "2018-03-12T00:21:38.930Z"
+    }
+);
+
+Test.setProvider(provider);
+
+//没有默认地址，会报错
+//UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 3): Error: invalid address
+//务必设置为自己的钱包地址，如果不知道，查看自己的客户端启动时，观察打印到控制台的地址
+Test.defaults({
+    from : "0xf17f52151EbEF6C7334FAD080c5704D77216b732"
+});
+
+var instance;
+
+Test.deployed().then(function(instance){
+    return instance.sayHi.call();
+}).then(function(result){
+    console.log(result);
+});

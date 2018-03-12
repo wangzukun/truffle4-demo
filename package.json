@@ -1,0 +1,28 @@
+{
+  "name": "trffle4-demo",
+  "version": "1.0.0",
+  "description": "This is a sample project",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangzukun/truffle4-demo.git"
+  },
+  "keywords": [
+    "truffle4"
+  ],
+  "author": "wangzukun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wangzukun/truffle4-demo/issues"
+  },
+  "homepage": "https://github.com/wangzukun/truffle4-demo#readme",
+  "dependencies": {
+    "truffle-contract": "^3.0.4"
+  }
+}
